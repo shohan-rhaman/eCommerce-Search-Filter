@@ -3,9 +3,853 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Ever Github Repojj</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
 </head>
 <body>
-    
+    <aside class="flex mt-16" aria-label="Product filters and results">
+  <div
+    class="w-full max-w-[280px]  shrink-0 border-r border-slate-300 px-4 md:px-6  py-6"
+    role="region"
+    aria-labelledby="filter-heading"
+  >
+    <div class="flex items-center border-b border-slate-300 pb-2 mb-6">
+      <h2 id="filter-heading" class="text-slate-900 text-lg font-semibold">Filter</h2>
+      <button
+        type="button"
+        class="text-sm text-red-500 font-semibold ml-auto cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+        aria-label="Clear all filters"
+      >
+        Clear all
+      </button>
+    </div>
+
+    <!-- Brand -->
+    <fieldset>
+      <legend class="text-slate-900 text-sm font-semibold">Brand</legend>
+
+      <form class="mt-2">
+        <div class="relative">
+          <input
+            type="search"
+            id="vendor-search"
+            placeholder="Search brand"
+            class="w-full border border-gray-300 rounded-md py-2 pl-3 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"/>
+          </svg>
+        </div>
+      </form>
+
+      <ul class="mt-6 space-y-4">
+        
+          <li>
+            <label class="flex items-center gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                value="text"
+              >
+
+              <span class="vendor-name">Zara</span>
+            </label>
+          </li>
+          <li>
+            <label class="flex items-center gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                value="text"
+              >
+
+              <span class="vendor-name">Puma</span>
+            </label>
+          </li>
+          <li>
+            <label class="flex items-center gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                value="text"
+              >
+
+              <span class="vendor-name">Addidas</span>
+            </label>
+          </li>
+      </ul>
+    </fieldset>
+
+    <hr class="my-6 border-slate-300">
+
+    <!-- Size -->
+    <fieldset>
+      <legend class="text-slate-900 text-sm font-semibold">Size</legend>
+      <div class="flex flex-wrap gap-3 mt-4">
+        <button
+          type="button"
+          aria-pressed="false"
+          class="cursor-pointer border border-slate-300 hover:border-blue-600 rounded-md text-[13px] text-slate-900 font-medium py-1 px-1 min-w-14 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        >
+          XS
+        </button>
+        <button
+          type="button"
+          aria-pressed="false"
+          class="cursor-pointer border border-slate-300 hover:border-blue-600 rounded-md text-[13px] text-slate-900 font-medium py-1 px-1 min-w-14 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        >
+          S
+        </button>
+        <button
+          type="button"
+          aria-pressed="false"
+          class="cursor-pointer border border-slate-300 hover:border-blue-600 rounded-md text-[13px] text-slate-900 font-medium py-1 px-1 min-w-14 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        >
+          M
+        </button>
+        <button
+          type="button"
+          aria-pressed="false"
+          class="cursor-pointer border border-slate-300 hover:border-blue-600 rounded-md text-[13px] text-slate-900 font-medium py-1 px-1 min-w-14 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        >
+          L
+        </button>
+        <button
+          type="button"
+          aria-pressed="false"
+          class="cursor-pointer border border-slate-300 hover:border-blue-600 rounded-md text-[13px] text-slate-900 font-medium py-1 px-1 min-w-14 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        >
+          XL
+        </button>
+        <button
+          type="button"
+          aria-pressed="false"
+          class="cursor-pointer border border-slate-300 hover:border-blue-600 rounded-md text-[13px] text-slate-900 font-medium py-1 px-1 min-w-14 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        >
+          XXL
+        </button>
+        <button
+          type="button"
+          aria-pressed="false"
+          class="cursor-pointer border border-slate-300 hover:border-blue-600 rounded-md text-[13px] text-slate-900 font-medium py-1 px-1 min-w-14 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        >
+          XXXL
+        </button>
+        <button
+          type="button"
+          aria-pressed="false"
+          class="cursor-pointer border border-slate-300 hover:border-blue-600 rounded-md text-[13px] text-slate-900 font-medium py-1 px-1 min-w-14 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        >
+          4XL
+        </button>
+      </div>
+    </fieldset>
+
+    <hr class="my-6 border-slate-300">
+
+    <!-- Price -->
+    <fieldset>
+      <legend id="price-heading" class="text-slate-900 text-sm font-semibold">Price</legend>
+
+      <div class="relative mt-6">
+        <div class="h-1.5 bg-gray-300 relative">
+          <div id="activeTrack" class="absolute h-1.5 bg-blue-600 rounded-full w-9/12"></div>
+        </div>
+
+        <label for="minRange" class="sr-only">Minimum price</label>
+        <input
+          type="range"
+          id="minRange"
+          min="0"
+          max="1000"
+          value="0"
+          aria-describedby="price-range-values"
+          class="absolute top-0 w-full h-1.5 bg-transparent appearance-none cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+        >
+
+        <label for="maxRange" class="sr-only">Maximum price</label>
+        <input
+          type="range"
+          id="maxRange"
+          min="0"
+          max="1000"
+          value="750"
+          aria-describedby="price-range-values"
+          class="absolute top-0 w-full h-1.5 bg-transparent appearance-none cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+        >
+
+        <div
+          id="price-range-values"
+          class="flex justify-between text-slate-600 font-medium text-sm mt-4"
+          aria-live="polite"
+        >
+          <span id="minPrice">$750</span>
+          <span id="maxPrice">$1000</span>
+        </div>
+      </div>
+    </fieldset>
+
+    <hr class="my-6 border-slate-300">
+
+    <!-- Color -->
+    <fieldset>
+      <legend class="text-slate-900 text-sm font-semibold">Color</legend>
+      <div class="flex flex-wrap gap-3 mt-4">
+        <button
+          type="button"
+          aria-label="Blue"
+          aria-pressed="false"
+          class="cursor-pointer rounded-full bg-blue-700 w-8 h-8 hover:scale-[1.05] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        ></button>
+        <button
+          type="button"
+          aria-label="Purple"
+          aria-pressed="false"
+          class="cursor-pointer rounded-full bg-purple-700 w-8 h-8 hover:scale-[1.05] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        ></button>
+        <button
+          type="button"
+          aria-label="Pink"
+          aria-pressed="false"
+          class="cursor-pointer rounded-full bg-pink-700 w-8 h-8 hover:scale-[1.05] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        ></button>
+        <button
+          type="button"
+          aria-label="Orange"
+          aria-pressed="false"
+          class="cursor-pointer rounded-full bg-orange-700 w-8 h-8 hover:scale-[1.05] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        ></button>
+        <button
+          type="button"
+          aria-label="Red"
+          aria-pressed="false"
+          class="cursor-pointer rounded-full bg-red-700 w-8 h-8 hover:scale-[1.05] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        ></button>
+        <button
+          type="button"
+          aria-label="Yellow"
+          aria-pressed="false"
+          class="cursor-pointer rounded-full bg-yellow-700 w-8 h-8 hover:scale-[1.05] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        ></button>
+        <button
+          type="button"
+          aria-label="Black"
+          aria-pressed="false"
+          class="cursor-pointer rounded-full bg-black w-8 h-8 hover:scale-[1.05] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        ></button>
+        <button
+          type="button"
+          aria-label="Gray"
+          aria-pressed="false"
+          class="cursor-pointer rounded-full bg-gray-700 w-8 h-8 hover:scale-[1.05] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        ></button>
+      </div>
+    </fieldset>
+  </div>
+
+  <!-- Products -->
+
+        <section class="mt-6 px-4 md:px-8" aria-labelledby="products-heading">
+   <div class="max-w-7xl mx-auto">
+      <div class="border-b border-slate-300 pb-4 mb-8 md:mb-12">
+         <h2 id="products-heading" class="text-2xl font-bold text-slate-900">Hot list</h2>
+         <p class="text-base text-slate-600 mt-2">Out the most popular and trending products.</p>
+      </div>
+
+      <ul class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+         <li
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
+               <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
+                  <img src="https://readymadeui.com/images/sunscreen-img-1.webp" alt="sunscreen"
+                     class="w-full aspect-square object-cover object-top" />
+               </div>
+
+               <div class="py-4 px-2 text-left">
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">Skin
+                     Glow Combo</h3>
+                  <div class="flex items-center flex-wrap gap-3 mt-2">
+                     <div class="flex justify-center gap-2" role="img" aria-label="Rated 4 out of 5 stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#CED5D8]"
+                           viewBox="0 0 24 24" aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                     </div>
+                     <p class="text-sm font-medium text-slate-600">(102)</p>
+                  </div>
+
+                  <div class="mt-4">
+                     <p class="text-slate-900 font-semibold text-sm sm:text-base break-words">
+                        <span class="mr-1.5">MRP:</span><strike
+                           class="mr-1.5 text-slate-600">$11.00</strike>$8.00
+                     </p>
+                  </div>
+               </div>
+            </a>
+            <div class="flex flex-col items-center mt-2">
+               <button type="button"
+                  class="w-full cursor-pointer text-sm px-3.5 py-2 font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white border border-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">Add
+                  to Bag</button>
+               <button type="button"
+                  class="w-full flex items-center justify-center gap-2 pb-1.5 pt-3 cursor-pointer text-sm text-slate-900 font-medium whitespace-nowrap rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-current" viewBox="0 0 66 66"
+                     aria-hidden="true">
+                     <path
+                        d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                        data-original="#000000">
+                     </path>
+                  </svg>
+                  <span>Add to wishlist</span></button>
+            </div>
+         </li>
+
+         <li
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
+               <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
+                  <img src="https://readymadeui.com/images/sunscreen-img-2.webp" alt="Crystal Glow"
+                     class="w-full aspect-square object-cover object-top" />
+               </div>
+
+               <div class="py-4 px-2 text-left">
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">Crystal
+                     Glow</h3>
+                  <div class="flex items-center flex-wrap gap-3 mt-2">
+                     <div class="flex justify-center gap-2" role="img" aria-label="Rated 4 out of 5 stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#CED5D8]"
+                           viewBox="0 0 24 24" aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                     </div>
+                     <p class="text-sm font-medium text-slate-600">(100)</p>
+                  </div>
+
+                  <div class="mt-4">
+                     <p class="text-slate-900 font-semibold text-sm sm:text-base break-words">
+                        <span class="mr-1.5">MRP:</span><strike
+                           class="mr-1.5 text-slate-600">$14.00</strike>$9.00
+                     </p>
+                  </div>
+               </div>
+            </a>
+            <div class="flex flex-col items-center mt-2">
+               <button type="button"
+                  class="w-full cursor-pointer text-sm px-3.5 py-2 font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white border border-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">Add
+                  to Bag</button>
+               <button type="button"
+                  class="w-full flex items-center justify-center gap-2 pb-1.5 pt-3 cursor-pointer text-sm text-slate-900 font-medium whitespace-nowrap rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-current" viewBox="0 0 66 66"
+                     aria-hidden="true">
+                     <path
+                        d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                        data-original="#000000">
+                     </path>
+                  </svg>
+                  <span>Add to wishlist</span></button>
+            </div>
+         </li>
+
+         <li
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
+               <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
+                  <img src="https://readymadeui.com/images/sunscreen-img-3.webp" alt="Lancome La Base"
+                     class="w-full aspect-square object-cover object-top" />
+               </div>
+
+               <div class="py-4 px-2 text-left">
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">Lancome
+                     La Base</h3>
+                  <div class="flex items-center flex-wrap gap-3 mt-2">
+                     <div class="flex justify-center gap-2" role="img" aria-label="Rated 3 out of 5 stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#CED5D8]"
+                           viewBox="0 0 24 24" aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#CED5D8]"
+                           viewBox="0 0 24 24" aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                     </div>
+                     <p class="text-sm font-medium text-slate-600">(90)</p>
+                  </div>
+
+                  <div class="mt-4">
+                     <p class="text-slate-900 font-semibold text-sm sm:text-base break-words">
+                        <span class="mr-1.5">MRP:</span><strike
+                           class="mr-1.5 text-slate-600">$11.00</strike>$7.00
+                     </p>
+                  </div>
+               </div>
+            </a>
+            <div class="flex flex-col items-center mt-2">
+               <button type="button"
+                  class="w-full cursor-pointer text-sm px-3.5 py-2 font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white border border-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">Add
+                  to Bag</button>
+               <button type="button"
+                  class="w-full flex items-center justify-center gap-2 pb-1.5 pt-3 cursor-pointer text-sm text-slate-900 font-medium whitespace-nowrap rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-current" viewBox="0 0 66 66"
+                     aria-hidden="true">
+                     <path
+                        d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                        data-original="#000000">
+                     </path>
+                  </svg>
+                  <span>Add to wishlist</span></button>
+            </div>
+         </li>
+
+         <li
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
+               <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
+                  <img src="https://readymadeui.com/images/sunscreen-img-4.webp" alt="HD Face Primer"
+                     class="w-full aspect-square object-cover object-top" />
+               </div>
+
+               <div class="py-4 px-2 text-left">
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">HD Face
+                     Primer</h3>
+                  <div class="flex items-center flex-wrap gap-3 mt-2">
+                     <div class="flex justify-center gap-2" role="img" aria-label="Rated 5 out of 5 stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                     </div>
+                     <p class="text-sm font-medium text-slate-600">(102)</p>
+                  </div>
+
+                  <div class="mt-4">
+                     <p class="text-slate-900 font-semibold text-sm sm:text-base break-words">
+                        <span class="mr-1.5">MRP:</span><strike
+                           class="mr-1.5 text-slate-600">$16.00</strike>$12.00
+                     </p>
+                  </div>
+               </div>
+            </a>
+            <div class="flex flex-col items-center mt-2">
+               <button type="button"
+                  class="w-full cursor-pointer text-sm px-3.5 py-2 font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white border border-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">Add
+                  to Bag</button>
+               <button type="button"
+                  class="w-full flex items-center justify-center gap-2 pb-1.5 pt-3 cursor-pointer text-sm text-slate-900 font-medium whitespace-nowrap rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-current" viewBox="0 0 66 66"
+                     aria-hidden="true">
+                     <path
+                        d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                        data-original="#000000">
+                     </path>
+                  </svg>
+                  <span>Add to wishlist</span></button>
+            </div>
+         </li>
+
+         <li
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
+               <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
+                  <img src="https://readymadeui.com/images/sunscreen-img-5.webp" alt="Sunscreen Gel"
+                     class="w-full aspect-square object-cover object-top" />
+               </div>
+
+               <div class="py-4 px-2 text-left">
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">
+                     Sunscreen Gel</h3>
+                  <div class="flex items-center flex-wrap gap-3 mt-2">
+                     <div class="flex justify-center gap-2" role="img" aria-label="Rated 4 out of 5 stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#CED5D8]"
+                           viewBox="0 0 24 24" aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                     </div>
+                     <p class="text-sm font-medium text-slate-600">(102)</p>
+                  </div>
+
+                  <div class="mt-4">
+                     <p class="text-slate-900 font-semibold text-sm sm:text-base break-words">
+                        <span class="mr-1.5">MRP:</span><strike
+                           class="mr-1.5 text-slate-600">$18.00</strike>$12.00
+                     </p>
+                  </div>
+               </div>
+            </a>
+            <div class="flex flex-col items-center mt-2">
+               <button type="button"
+                  class="w-full cursor-pointer text-sm px-3.5 py-2 font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white border border-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">Add
+                  to Bag</button>
+               <button type="button"
+                  class="w-full flex items-center justify-center gap-2 pb-1.5 pt-3 cursor-pointer text-sm text-slate-900 font-medium whitespace-nowrap rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-current" viewBox="0 0 66 66"
+                     aria-hidden="true">
+                     <path
+                        d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                        data-original="#000000">
+                     </path>
+                  </svg>
+                  <span>Add to wishlist</span></button>
+            </div>
+         </li>
+
+         <li
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
+               <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
+                  <img src="https://readymadeui.com/images/sunscreen-img-6.webp" alt="Watermelon Sunscreen"
+                     class="w-full aspect-square object-cover object-top" />
+               </div>
+
+               <div class="py-4 px-2 text-left">
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">
+                     Watermelon Sunscreen</h3>
+                  <div class="flex items-center flex-wrap gap-3 mt-2">
+                     <div class="flex justify-center gap-2" role="img" aria-label="Rated 4 out of 5 stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#CED5D8]"
+                           viewBox="0 0 24 24" aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                     </div>
+                     <p class="text-sm font-medium text-slate-600">(102)</p>
+                  </div>
+
+                  <div class="mt-4">
+                     <p class="text-slate-900 font-semibold text-sm sm:text-base break-words">
+                        <span class="mr-1.5">MRP:</span><strike
+                           class="mr-1.5 text-slate-600">$20.00</strike>$14.00
+                     </p>
+                  </div>
+               </div>
+            </a>
+            <div class="flex flex-col items-center mt-2">
+               <button type="button"
+                  class="w-full cursor-pointer text-sm px-3.5 py-2 font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white border border-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">Add
+                  to Bag</button>
+               <button type="button"
+                  class="w-full flex items-center justify-center gap-2 pb-1.5 pt-3 cursor-pointer text-sm text-slate-900 font-medium whitespace-nowrap rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-current" viewBox="0 0 66 66"
+                     aria-hidden="true">
+                     <path
+                        d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                        data-original="#000000">
+                     </path>
+                  </svg>
+                  <span>Add to wishlist</span></button>
+            </div>
+         </li>
+
+         <li
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
+               <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
+                  <img src="https://readymadeui.com/images/aloederm-cream-img-1.webp" alt="Aloederm Body Cream"
+                     class="w-full aspect-square object-cover object-top" />
+               </div>
+
+               <div class="py-4 px-2 text-left">
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">Aloederm
+                     Body Cream</h3>
+                  <div class="flex items-center flex-wrap gap-3 mt-2">
+                     <div class="flex justify-center gap-2" role="img" aria-label="Rated 3 out of 5 stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#CED5D8]"
+                           viewBox="0 0 24 24" aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#CED5D8]"
+                           viewBox="0 0 24 24" aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                     </div>
+                     <p class="text-sm font-medium text-slate-600">(200)</p>
+                  </div>
+
+                  <div class="mt-4">
+                     <p class="text-slate-900 font-semibold text-sm sm:text-base break-words">
+                        <span class="mr-1.5">MRP:</span><strike
+                           class="mr-1.5 text-slate-600">$22.00</strike>$14.00
+                     </p>
+                  </div>
+               </div>
+            </a>
+            <div class="flex flex-col items-center mt-2">
+               <button type="button"
+                  class="w-full cursor-pointer text-sm px-3.5 py-2 font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white border border-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">Add
+                  to Bag</button>
+               <button type="button"
+                  class="w-full flex items-center justify-center gap-2 pb-1.5 pt-3 cursor-pointer text-sm text-slate-900 font-medium whitespace-nowrap rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-current" viewBox="0 0 66 66"
+                     aria-hidden="true">
+                     <path
+                        d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                        data-original="#000000">
+                     </path>
+                  </svg>
+                  <span>Add to wishlist</span></button>
+            </div>
+         </li>
+
+         <li
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
+               <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
+                  <img src="https://readymadeui.com/images/aloederm-cream-img-2.webp" alt="Aloederm Face Cream"
+                     class="w-full aspect-square object-cover object-top" />
+               </div>
+
+               <div class="py-4 px-2 text-left">
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">Aloederm
+                     Face Cream</h3>
+                  <div class="flex items-center flex-wrap gap-3 mt-2">
+                     <div class="flex justify-center gap-2" role="img" aria-label="Rated 4 out of 5 stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#ffc107]" viewBox="0 0 24 24"
+                           aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 fill-[#CED5D8]"
+                           viewBox="0 0 24 24" aria-hidden="true">
+                           <path
+                              d="m23.363 8.584-7.378-1.127L12.678.413c-.247-.526-1.11-.526-1.357 0L8.015 7.457.637 8.584a.75.75 0 0 0-.423 1.265l5.36 5.494-1.267 7.767a.75.75 0 0 0 1.103.777L12 20.245l6.59 3.643a.75.75 0 0 0 1.103-.777l-1.267-7.767 5.36-5.494a.75.75 0 0 0-.423-1.266z"
+                              data-original="#ffc107" />
+                        </svg>
+                     </div>
+                     <p class="text-sm font-medium text-slate-600">(88)</p>
+                  </div>
+
+                  <div class="mt-4">
+                     <p class="text-slate-900 font-semibold text-sm sm:text-base break-words">
+                        <span class="mr-1.5">MRP:</span><strike
+                           class="mr-1.5 text-slate-600">$20.00</strike>$12.00
+                     </p>
+                  </div>
+               </div>
+            </a>
+            <div class="flex flex-col mt-2">
+               <button type="button"
+                  class="w-full cursor-pointer text-sm px-3.5 py-2 font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white border border-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">Add
+                  to Bag</button>
+               <button type="button"
+                  class="w-full flex items-center justify-center gap-2 pb-1.5 pt-3 cursor-pointer text-sm text-slate-900 font-medium whitespace-nowrap rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-current" viewBox="0 0 66 66"
+                     aria-hidden="true">
+                     <path
+                        d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
+                        data-original="#000000">
+                     </path>
+                  </svg>
+                  <span>Add to wishlist</span></button>
+            </div>
+         </li>
+
+      </ul>
+   </div>
+        </section>
+ 
+</aside>
+
 </body>
 </html>
+
+
+<script>
+    
+</script>
