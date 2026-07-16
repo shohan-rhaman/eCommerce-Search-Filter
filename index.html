@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+    <title>eCommerce Product Filter</title>
 </head>
 <body>
     <aside class="flex mt-16" aria-label="Product filters and results">
@@ -26,13 +26,13 @@
 
     <!-- Brand -->
     <fieldset>
-      <legend class="text-slate-900 text-sm font-semibold">Brand</legend>
+      <legend class="text-slate-900 text-sm font-semibold">Search Product</legend>
 
       <form class="mt-2">
         <div class="relative">
           <input
             type="search"
-            id="vendor-search"
+            id="product-search"
             placeholder="Search brand"
             class="w-full border border-gray-300 rounded-md py-2 pl-3 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
@@ -259,13 +259,14 @@
         <section class="mt-6 px-4 md:px-8" aria-labelledby="products-heading">
    <div class="max-w-7xl mx-auto">
       <div class="border-b border-slate-300 pb-4 mb-8 md:mb-12">
-         <h2 id="products-heading" class="text-2xl font-bold text-slate-900">Hot list</h2>
+         <h2 id="products-heading" class="text-2xl font-bold text-slate-900">Product list</h2>
          <p class="text-base text-slate-600 mt-2">Out the most popular and trending products.</p>
       </div>
 
       <ul class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/sunscreen-img-1.webp" alt="sunscreen"
@@ -273,7 +274,7 @@
                </div>
 
                <div class="py-4 px-2 text-left">
-                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">Skin
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2 product-title">Skin
                      Glow Combo</h3>
                   <div class="flex items-center flex-wrap gap-3 mt-2">
                      <div class="flex justify-center gap-2" role="img" aria-label="Rated 4 out of 5 stars">
@@ -337,7 +338,7 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/sunscreen-img-2.webp" alt="Crystal Glow"
@@ -345,7 +346,7 @@
                </div>
 
                <div class="py-4 px-2 text-left">
-                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">Crystal
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2 product-title">Crystal
                      Glow</h3>
                   <div class="flex items-center flex-wrap gap-3 mt-2">
                      <div class="flex justify-center gap-2" role="img" aria-label="Rated 4 out of 5 stars">
@@ -409,7 +410,7 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/sunscreen-img-3.webp" alt="Lancome La Base"
@@ -417,7 +418,7 @@
                </div>
 
                <div class="py-4 px-2 text-left">
-                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">Lancome
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2 product-title">Lancome
                      La Base</h3>
                   <div class="flex items-center flex-wrap gap-3 mt-2">
                      <div class="flex justify-center gap-2" role="img" aria-label="Rated 3 out of 5 stars">
@@ -481,7 +482,7 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/sunscreen-img-4.webp" alt="HD Face Primer"
@@ -489,7 +490,7 @@
                </div>
 
                <div class="py-4 px-2 text-left">
-                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">HD Face
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2 product-title">HD Face
                      Primer</h3>
                   <div class="flex items-center flex-wrap gap-3 mt-2">
                      <div class="flex justify-center gap-2" role="img" aria-label="Rated 5 out of 5 stars">
@@ -553,7 +554,7 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/sunscreen-img-5.webp" alt="Sunscreen Gel"
@@ -561,7 +562,7 @@
                </div>
 
                <div class="py-4 px-2 text-left">
-                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2 product-title">
                      Sunscreen Gel</h3>
                   <div class="flex items-center flex-wrap gap-3 mt-2">
                      <div class="flex justify-center gap-2" role="img" aria-label="Rated 4 out of 5 stars">
@@ -625,7 +626,7 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/sunscreen-img-6.webp" alt="Watermelon Sunscreen"
@@ -633,7 +634,7 @@
                </div>
 
                <div class="py-4 px-2 text-left">
-                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2 product-title">
                      Watermelon Sunscreen</h3>
                   <div class="flex items-center flex-wrap gap-3 mt-2">
                      <div class="flex justify-center gap-2" role="img" aria-label="Rated 4 out of 5 stars">
@@ -697,7 +698,7 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/aloederm-cream-img-1.webp" alt="Aloederm Body Cream"
@@ -705,7 +706,7 @@
                </div>
 
                <div class="py-4 px-2 text-left">
-                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">Aloederm
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2 product-title">Aloederm
                      Body Cream</h3>
                   <div class="flex items-center flex-wrap gap-3 mt-2">
                      <div class="flex justify-center gap-2" role="img" aria-label="Rated 3 out of 5 stars">
@@ -769,7 +770,7 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/aloederm-cream-img-2.webp" alt="Aloederm Face Cream"
@@ -777,7 +778,7 @@
                </div>
 
                <div class="py-4 px-2 text-left">
-                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2">Aloederm
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900 line-clamp-2 product-title">Aloederm
                      Face Cream</h3>
                   <div class="flex items-center flex-wrap gap-3 mt-2">
                      <div class="flex justify-center gap-2" role="img" aria-label="Rated 4 out of 5 stars">
@@ -851,5 +852,34 @@
 
 
 <script>
-    
+
+   const searchInput = document.getElementById("product-search");
+
+   const productCards = document.querySelectorAll(".product-card");
+
+
+   searchInput.addEventListener("input", ()=>{
+      var searchText = searchInput.value.toLowerCase().trim();
+
+      productCards.forEach(card =>{
+         var productTitle = card.querySelector(".product-title").textContent.toLowerCase().trim();
+
+         
+         // match between Searh Text and Product Text
+         if(productTitle.includes(searchText)){
+            // best for tailwind css
+            card.classList.remove("hidden");
+            //card.style.display = "";
+         }else{
+            card.classList.add("hidden");
+            //card.style.display = "none";
+         }
+         
+
+         // Ternery Oporator (condition ? valueIfTrue : valueIfFalse;)
+         // card.style.display = productTitle.includes(searchText) ? "" : "none";
+
+      })
+   })
+
 </script>
