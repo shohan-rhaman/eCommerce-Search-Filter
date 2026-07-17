@@ -52,36 +52,39 @@
         </div>
       </form>
 
-      <ul class="mt-6 space-y-4">
+      <ul class="mt-6 space-y-4 ">
         
           <li>
             <label class="flex items-center gap-3 cursor-pointer">
               <input
                 type="checkbox"
-                value="text"
+                class="vendor-filter"
+                value="L'Oréal"
               >
 
-              <span class="vendor-name">Zara</span>
+              <span class="vendor-name">L'Oréal</span>
             </label>
           </li>
           <li>
             <label class="flex items-center gap-3 cursor-pointer">
               <input
                 type="checkbox"
-                value="text"
+                class="vendor-filter"
+                value="Garnier"
               >
 
-              <span class="vendor-name">Puma</span>
+              <span class="vendor-name">Garnier</span>
             </label>
           </li>
           <li>
             <label class="flex items-center gap-3 cursor-pointer">
               <input
                 type="checkbox"
-                value="text"
+                class="vendor-filter"
+                value="Neutrogena"
               >
 
-              <span class="vendor-name">Addidas</span>
+              <span class="vendor-name">Neutrogena</span>
             </label>
           </li>
       </ul>
@@ -266,7 +269,9 @@
       <ul class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card"
+            data-vendor="L'Oréal"
+            >
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/sunscreen-img-1.webp" alt="sunscreen"
@@ -338,7 +343,9 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card"
+            data-vendor="L'Oréal"
+            >
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/sunscreen-img-2.webp" alt="Crystal Glow"
@@ -410,7 +417,9 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card"
+            data-vendor="Garnier"
+            >
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/sunscreen-img-3.webp" alt="Lancome La Base"
@@ -482,7 +491,9 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card"
+            data-vendor="Garnier"
+            >
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/sunscreen-img-4.webp" alt="HD Face Primer"
@@ -554,7 +565,9 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card"
+            data-vendor="Garnier"
+            >
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/sunscreen-img-5.webp" alt="Sunscreen Gel"
@@ -626,7 +639,9 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card"
+            data-vendor="Neutrogena"
+            >
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/sunscreen-img-6.webp" alt="Watermelon Sunscreen"
@@ -698,7 +713,9 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card"
+            data-vendor="Neutrogena"
+            >
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/aloederm-cream-img-1.webp" alt="Aloederm Body Cream"
@@ -770,7 +787,9 @@
          </li>
 
          <li
-            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card">
+            class="flex flex-col border border-slate-300 shadow-sm rounded-md p-1.5 transition-all relative overflow-hidden product-card"
+            data-vendor="Neutrogena"
+            >
             <a href="#" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                <div class="w-full bg-slate-50 rounded-sm overflow-hidden">
                   <img src="https://readymadeui.com/images/aloederm-cream-img-2.webp" alt="Aloederm Face Cream"
@@ -854,8 +873,11 @@
 <script>
 
    const searchInput = document.getElementById("product-search");
+   const checkboxes = document.querySelectorAll(".vendor-filter")
 
    const productCards = document.querySelectorAll(".product-card");
+
+   const checkBox = [];
 
 
    searchInput.addEventListener("input", ()=>{
@@ -882,4 +904,27 @@
       })
    })
 
+
+   // CeckBox Filter
+   checkboxes.forEach(checkBox =>{
+      
+      checkBox.addEventListener("change", ()=>{
+
+         const selectedBrand = checkBox.value.toLowerCase();
+         
+         productCards.forEach(card =>{
+            const cardVendor = card.dataset.vendor.toLowerCase();
+            
+
+            if(cardVendor === selectedBrand){
+               card.style.display = ""
+            }else{
+               card.style.display = "none"
+            }
+
+         })
+
+      })
+
+   })
 </script>
