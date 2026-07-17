@@ -879,6 +879,8 @@
 
    const checkBox = [];
 
+   console.log("checkbox array", checkBox)
+
 
    searchInput.addEventListener("input", ()=>{
       var searchText = searchInput.value.toLowerCase().trim();
@@ -910,13 +912,28 @@
       
       checkBox.addEventListener("change", ()=>{
 
+         // Store all checked brands
+         const selectedBrands = []
+
+         console.log("selected array >>", selectedBrands)
+
+         checkboxes.forEach(box =>{
+            if(box.checked){
+            selectedBrands.push(box.value.toLowerCase())
+         }
+         })
+
+         
+
          const selectedBrand = checkBox.value.toLowerCase();
+
+         // Show/Hide products
          
          productCards.forEach(card =>{
             const cardVendor = card.dataset.vendor.toLowerCase();
             
 
-            if(cardVendor === selectedBrand){
+            if(selectedBrands.length === 0 || selectedBrands.includes(cardVendor)){
                card.style.display = ""
             }else{
                card.style.display = "none"
