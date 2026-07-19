@@ -871,15 +871,11 @@
 
 
 <script>
-
+/*
    const searchInput = document.getElementById("product-search");
    const checkboxes = document.querySelectorAll(".vendor-filter")
 
    const productCards = document.querySelectorAll(".product-card");
-
-   const checkBox = [];
-
-   console.log("checkbox array", checkBox)
 
 
    searchInput.addEventListener("input", ()=>{
@@ -915,17 +911,12 @@
          // Store all checked brands
          const selectedBrands = []
 
-         console.log("selected array >>", selectedBrands)
-
          checkboxes.forEach(box =>{
             if(box.checked){
             selectedBrands.push(box.value.toLowerCase())
          }
          })
 
-         
-
-         const selectedBrand = checkBox.value.toLowerCase();
 
          // Show/Hide products
          
@@ -944,4 +935,73 @@
       })
 
    })
+
+*/
+
+const searchInput = document.getElementById("product-search");
+const checkboxes = document.querySelectorAll(".vendor-filter");
+const productCards = document.querySelectorAll(".product-card");
+
+
+function filterProducts(){
+
+   // get search text
+   const searchText = searchInput.value.toLowerCase().trim();
+
+   // get all selected brands 
+   const selectedBrands = [];
+
+   checkboxes.forEach(box=>{
+      if(box.checked){
+         selectedBrands.push(box.value.toLowerCase())
+      }
+   })
+   
+   // Loop through every product card
+   productCards.forEach(card =>{
+      // When i move it to Shopify, i'll optimize it to:
+      // const cardTitle = card.dataset.title;
+
+      // get title
+      const cardTitle = card.querySelector(".product-title").textContent.toLowerCase();
+      // get vendor
+      const cardVendor = card.dataset.vendor.toLowerCase();
+
+      // Create matchesSearch
+      const matchesSearch = cardTitle.includes(searchText);
+
+      // Create matchesVendor
+      const matchesVendor = selectedBrands.length === 0 || selectedBrands.includes(cardVendor);
+
+      if(matchesSearch && matchesVendor){
+         card.style.display = "";
+      }else{
+         card.style.display = "none"
+      }
+
+      
+   })
+
+
+
+}
+
+// =========================
+// Event Listeners
+// =========================
+
+// Search
+searchInput.addEventListener("input", filterProducts);
+
+// Vendor
+checkboxes.forEach(box => {
+    box.addEventListener("change", filterProducts);
+});
+
+
+// =========================
+// Initial Page Load
+// =========================
+filterProducts();
+
 </script>
